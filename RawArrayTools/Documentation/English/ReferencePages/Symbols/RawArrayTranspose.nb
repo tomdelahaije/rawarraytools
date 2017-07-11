@@ -1,0 +1,282 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     10223,        273]
+NotebookOptionsPosition[      7511,        206]
+NotebookOutlinePosition[      9535,        257]
+CellTagsIndexPosition[      9492,        254]
+WindowTitle->RawArrayTranspose
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["RAW ARRAY TOOLS PACKAGE SYMBOL", "PacletNameCell",ExpressionUUID->
+     "ab49c121-3635-4f2c-98aa-ddab55afa4ef"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Related Guides",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }],ExpressionUUID->"8ee5efb4-03cc-4061-a639-36b8bd7c14ca"],
+         TextCell[
+          Row[{"Related Guides", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"RawArrayTools\"\>":>
+       Documentation`HelpLookup["paclet:RawArrayTools/guide/RawArrayTools"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"MoreAbout"]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "95346893-4905-43aa-9f99-5491c4370176"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "URL",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }],ExpressionUUID->"c0496fba-4642-4400-9cc9-94b3e8096b65"],
+         TextCell[
+          Row[{"URL", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"RawArrayTools/ref/RawArrayTranspose\"\>":>
+       None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["RawArrayTools/ref/RawArrayTranspose"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/language/RawArrayTools/ref/\
+RawArrayTranspose.html"], StandardForm]], "Input", TextClipboardType -> 
+              "PlainText"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+             If[
+              TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$13394], 
+              "http://reference.wolfram.com/system-modeler/", 
+              "http://reference.wolfram.com/language/"], 
+             "RawArrayTools/ref/RawArrayTranspose", ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"URLMenu"]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "5043b817-5fbb-458e-bcc7-7531d3b255b6"]
+    }], "AnchorBar",ExpressionUUID->"acd79314-5b12-4f6f-85ec-19dc669c462f"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1,ExpressionUUID->"0324028a-34ae-49f1-924e-f0a2e5f3708c"],
+
+Cell[TextData[{
+ Cell["RawArrayTranspose", "ObjectName",ExpressionUUID->
+  "f048ffd3-ca58-4da1-b9fc-1b4123abcaab"],
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{8, 0}],
+    CacheGraphics->False],
+   Spacer[8],
+   Selectable->False]],ExpressionUUID->"e19ca533-d3e6-4e06-b5fe-4954731aee5e"],
+ Cell[BoxData[
+ ""], "ObjectNameTranslation",ExpressionUUID->
+  "ab5fe45c-ab42-4722-9a60-83a4df6025ca"]
+}], "ObjectNameGrid",ExpressionUUID->"ff0af112-7183-4b97-99b3-beca456772a4"],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      TemplateBox[{Cell[
+         TextData["RawArrayTranspose"]],
+        "paclet:RawArrayTools/ref/RawArrayTranspose"},
+       "RefLink",
+       BaseStyle->{"InlineFormula"}]], "InlineFormula",ExpressionUUID->
+      "01bf1556-f33c-4333-90f0-4a0c8f1a1609"],
+     "[",
+     StyleBox["raw", "TI"],
+     "] transposes the first two levels in ",
+     StyleBox["raw", "TI"],
+     "."
+    }],ExpressionUUID->"01a0889e-470c-4952-969c-98f7268ac0dc"]},
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      TemplateBox[{Cell[
+         TextData["RawArrayTranspose"]],
+        "paclet:RawArrayTools/ref/RawArrayTranspose"},
+       "RefLink",
+       BaseStyle->{"InlineFormula"}]], "InlineFormula",ExpressionUUID->
+      "160bda5b-c009-418e-90f4-e61d81fa6efc"],
+     "[",
+     StyleBox["raw", "TI"],
+     ", {",
+     Cell[BoxData[
+      FormBox[
+       StyleBox[
+        SubscriptBox["n", "1"], "TI"], TraditionalForm]],ExpressionUUID->
+      "30494f2d-8dc0-4d2b-9b43-1b073dbc11a0"],
+     ", ",
+     Cell[BoxData[
+      FormBox[
+       StyleBox[
+        SubscriptBox["n", "2"], "TI"], TraditionalForm]],ExpressionUUID->
+      "0982dcac-a2d3-4f5e-ba89-c126ef3b71f0"],
+     ", \[Ellipsis]}] transposes ",
+     StyleBox["raw", "TI"],
+     " such that the ",
+     Cell[BoxData[
+      FormBox[
+       SuperscriptBox["k", "th"], TraditionalForm]], "InlineMath",
+      ExpressionUUID->"454313db-bc3b-45b7-9357-0487c655b713"],
+     " level in ",
+     StyleBox["raw", "TI"],
+     " is the ",
+     Cell[BoxData[
+      FormBox[
+       SubsuperscriptBox["n", "k", "th"], TraditionalForm]], "InlineMath",
+      ExpressionUUID->"3183cc10-71e2-47a7-9a1b-74924bb3e790"],
+     " level in the result."
+    }],ExpressionUUID->"bd675080-0cac-45c1-8eec-f2d9ac23559c"]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {None, {None}}, 
+   "RowsIndexed" -> \
+{}}},ExpressionUUID->"0dc249a7-d90e-4a8b-9d51-9ca7a6b05b55"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6],
+   Selectable->False]],ExpressionUUID->"abf3da2e-25b3-4c22-823c-4faca4b90453"],
+ "Related Guides"
+}], "MoreAboutSection",
+ WholeCellGroupOpener->True,
+ CellID->38303248,ExpressionUUID->"e31a0e95-6a3b-4eb0-9a43-983767ff9039"],
+
+Cell["", "SectionHeaderSpacer",ExpressionUUID->"42d20062-d6df-4e59-b118-857902746c4e"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["RawArrayTools"]],"paclet:RawArrayTools/guide/RawArrayTools"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->1,ExpressionUUID->"8ea5e594-0508-4355-a0ac-3ca014647edc"]
+}, Open  ]],
+
+Cell[" ", "FooterCell",ExpressionUUID->"535d2949-b54c-4d12-b562-df5e5b4590a9"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"RawArrayTranspose",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "SymbolColor", "LinkTrails" -> 
+  GridBox[{{
+      RowBox[{
+        ButtonBox[
+        "RawArrayTools", ButtonData -> 
+         "paclet:RawArrayTools/guide/RawArrayTools", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
+    Left], "HasOptions" -> False, "ExampleCounter" -> 1, "NeedPlatMsgIn" -> 
+  None, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2017, 7, 11, 14, 25, 55.4867896}", 
+    "history" -> {"XX", "", "", ""}, "context" -> "RawArrayTools`", 
+    "keywords" -> {}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "Raw Array Tools Package Symbol", "language" -> "en", "paclet" -> 
+    "RawArrayTools Package", "status" -> "None", "summary" -> 
+    "RawArrayTranspose[raw] transposes the first two levels in raw. \
+RawArrayTranspose[raw, {n1, n2, ...}] transposes raw such that the k^th level \
+in raw is the n_k^th level in the result.", "synonyms" -> {}, 
+    "tabletags" -> {}, "title" -> "RawArrayTranspose", "titlemodifier" -> "", 
+    "windowtitle" -> "RawArrayTranspose", "type" -> "Symbol", "uri" -> 
+    "RawArrayTools/ref/RawArrayTranspose"}},
+CellContext->"Global`",
+FrontEndVersion->"11.1 for Microsoft Windows (64-bit) (April 18, 2017)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "11.1 for Microsoft Windows (64-bit) (April 18, 2017)", 
+  StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[589, 21, 3508, 77, 70, "AnchorBarGrid", "ExpressionUUID" -> \
+"0324028a-34ae-49f1-924e-f0a2e5f3708c",
+ CellID->1],
+Cell[4100, 100, 544, 15, 70, "ObjectNameGrid", "ExpressionUUID" -> \
+"ff0af112-7183-4b97-99b3-beca456772a4"],
+Cell[4647, 117, 2012, 58, 70, "Usage", "ExpressionUUID" -> \
+"0dc249a7-d90e-4a8b-9d51-9ca7a6b05b55"],
+Cell[CellGroupData[{
+Cell[6684, 179, 408, 13, 70, "MoreAboutSection", "ExpressionUUID" -> \
+"e31a0e95-6a3b-4eb0-9a43-983767ff9039",
+ CellID->38303248],
+Cell[7095, 194, 86, 0, 70, "SectionHeaderSpacer", "ExpressionUUID" -> \
+"42d20062-d6df-4e59-b118-857902746c4e"],
+Cell[7184, 196, 230, 5, 70, "MoreAbout", "ExpressionUUID" -> \
+"8ea5e594-0508-4355-a0ac-3ca014647edc",
+ CellID->1]
+}, Open  ]],
+Cell[7429, 204, 78, 0, 70, "FooterCell", "ExpressionUUID" -> \
+"535d2949-b54c-4d12-b562-df5e5b4590a9"]
+}
+]
+*)
+
+(* End of internal cache information *)

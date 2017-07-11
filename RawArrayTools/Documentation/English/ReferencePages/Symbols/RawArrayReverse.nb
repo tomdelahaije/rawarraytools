@@ -1,0 +1,301 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     10734,        292]
+NotebookOptionsPosition[      8008,        225]
+NotebookOutlinePosition[     10046,        276]
+CellTagsIndexPosition[     10003,        273]
+WindowTitle->RawArrayReverse
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["RAW ARRAY TOOLS PACKAGE SYMBOL", "PacletNameCell",ExpressionUUID->
+     "a775889e-95b3-40ac-9418-e79e433e6e13"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Related Guides",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }],ExpressionUUID->"eeb5f73e-6bcd-4205-821f-266ac81434f9"],
+         TextCell[
+          Row[{"Related Guides", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"RawArrayTools\"\>":>
+       Documentation`HelpLookup["paclet:RawArrayTools/guide/RawArrayTools"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"MoreAbout"]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "d2b9f86b-cdb6-4970-98da-14a740ce240b"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "URL",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }],ExpressionUUID->"d9892aac-145f-4869-a3bc-452f64dc3200"],
+         TextCell[
+          Row[{"URL", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"RawArrayTools/ref/RawArrayReverse\"\>":>
+       None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["RawArrayTools/ref/RawArrayReverse"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/language/RawArrayTools/ref/\
+RawArrayReverse.html"], StandardForm]], "Input", TextClipboardType -> 
+              "PlainText"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+             If[
+              TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$12924], 
+              "http://reference.wolfram.com/system-modeler/", 
+              "http://reference.wolfram.com/language/"], 
+             "RawArrayTools/ref/RawArrayReverse", ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"URLMenu"]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "6f277bbe-7431-4871-a7eb-0ed9bd51cae7"]
+    }], "AnchorBar",ExpressionUUID->"5e57bde7-f096-474e-93b0-b3f310957904"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1,ExpressionUUID->"12036e2f-665a-40f8-9f89-76c89aebc61f"],
+
+Cell[TextData[{
+ Cell["RawArrayReverse", "ObjectName",ExpressionUUID->
+  "2292cca8-050c-4b25-b722-bc82871ababf"],
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{8, 0}],
+    CacheGraphics->False],
+   Spacer[8],
+   Selectable->False]],ExpressionUUID->"5864a830-c2c9-469a-b424-e54f74f3f4d3"],
+ Cell[BoxData[
+ ""], "ObjectNameTranslation",ExpressionUUID->
+  "d146406d-b22b-4a3a-9146-fbea4bf007b6"]
+}], "ObjectNameGrid",ExpressionUUID->"a4b90942-10eb-4983-afe3-dc8114b685e0"],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      TemplateBox[{Cell[
+         TextData["RawArrayReverse"]],
+        "paclet:RawArrayTools/ref/RawArrayReverse"},
+       "RefLink",
+       BaseStyle->{"InlineFormula"}]], "InlineFormula",ExpressionUUID->
+      "bda1cd71-297b-49ff-917f-98118355c202"],
+     "[",
+     StyleBox["raw", "TI"],
+     "] reverses the order of the elements in ",
+     StyleBox["raw", "TI"],
+     "."
+    }],ExpressionUUID->"5dc3515e-73b6-4e7c-adbc-fa7182136508"]},
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      TemplateBox[{Cell[
+         TextData["RawArrayReverse"]],
+        "paclet:RawArrayTools/ref/RawArrayReverse"},
+       "RefLink",
+       BaseStyle->{"InlineFormula"}]], "InlineFormula",ExpressionUUID->
+      "6ce45bd0-4c07-4ed0-95b4-73111ed5d1af"],
+     "[",
+     StyleBox["raw", "TI"],
+     ", ",
+     StyleBox["n", "TI"],
+     "] reverses elements at level ",
+     StyleBox["n", "TI"],
+     " in ",
+     StyleBox["raw", "TI"],
+     "."
+    }],ExpressionUUID->"fec49fa9-70d5-4d9e-ba45-af5391f0092d"]},
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      TemplateBox[{Cell[
+         TextData["RawArrayReverse"]],
+        "paclet:RawArrayTools/ref/RawArrayReverse"},
+       "RefLink",
+       BaseStyle->{"InlineFormula"}]], "InlineFormula",ExpressionUUID->
+      "bb7eaeac-e58a-417d-9c11-647477ead3cf"],
+     "[",
+     StyleBox["raw", "TI"],
+     ", {",
+     Cell[BoxData[
+      FormBox[
+       StyleBox[
+        SubscriptBox["n", "1"], "TI"], TraditionalForm]],ExpressionUUID->
+      "3304f196-319d-4896-8c30-20978897decc"],
+     ", ",
+     Cell[BoxData[
+      FormBox[
+       StyleBox[
+        SubscriptBox["n", "2"], "TI"], TraditionalForm]],ExpressionUUID->
+      "02387952-8ed3-42b4-8381-dea0f9c1d48a"],
+     ", \[Ellipsis]}] reverses elements at level ",
+     Cell[BoxData[
+      FormBox[
+       StyleBox[
+        SubscriptBox["n", "1"], "TI"], TraditionalForm]],ExpressionUUID->
+      "35cc80ec-1c64-4d1e-bb07-a395adf3e5c0"],
+     ", ",
+     Cell[BoxData[
+      FormBox[
+       StyleBox[
+        SubscriptBox["n", "2"], "TI"], TraditionalForm]],ExpressionUUID->
+      "773520b8-6e4f-4b00-a006-10c64ff1f559"],
+     ", \[Ellipsis] in ",
+     StyleBox["raw", "TI"],
+     "."
+    }],ExpressionUUID->"f4b151ce-5f9a-48f5-b411-82d9af2f8f60"]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, 
+   "Rows" -> {None, None, {None}}, 
+   "RowsIndexed" -> \
+{}}},ExpressionUUID->"0de40326-348d-4805-8081-aa40dac7827d"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6],
+   Selectable->False]],ExpressionUUID->"d19f1b8b-d536-4ae1-b3a8-da664e522cba"],
+ "Related Guides"
+}], "MoreAboutSection",
+ WholeCellGroupOpener->True,
+ CellID->38303248,ExpressionUUID->"982140b3-3bd7-46a5-ad63-2ab32f8127b6"],
+
+Cell["", "SectionHeaderSpacer",ExpressionUUID->"aae3bac1-800b-4b85-90ab-9883254a437d"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["RawArrayTools"]],"paclet:RawArrayTools/guide/RawArrayTools"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->1,ExpressionUUID->"2b3f8aef-54c0-4b65-8adc-73e5d0d62362"]
+}, Open  ]],
+
+Cell[" ", "FooterCell",ExpressionUUID->"91a49269-3cd9-4d9b-abe4-03c061036cb1"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"RawArrayReverse",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "SymbolColor", "LinkTrails" -> 
+  GridBox[{{
+      RowBox[{
+        ButtonBox[
+        "RawArrayTools", ButtonData -> 
+         "paclet:RawArrayTools/guide/RawArrayTools", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
+    Left], "HasOptions" -> False, "ExampleCounter" -> 1, "NeedPlatMsgIn" -> 
+  None, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2017, 7, 11, 14, 25, 54.3176825}", 
+    "history" -> {"XX", "", "", ""}, "context" -> "RawArrayTools`", 
+    "keywords" -> {}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "Raw Array Tools Package Symbol", "language" -> "en", "paclet" -> 
+    "RawArrayTools Package", "status" -> "None", "summary" -> 
+    "RawArrayReverse[raw] reverses the order of the elements in raw. \
+RawArrayReverse[raw, n] reverses elements at level n in raw. \
+RawArrayReverse[raw, {n1, n2, ...}] reverses elements at level n1, n2, ... in \
+raw.", "synonyms" -> {}, "tabletags" -> {}, "title" -> "RawArrayReverse", 
+    "titlemodifier" -> "", "windowtitle" -> "RawArrayReverse", "type" -> 
+    "Symbol", "uri" -> "RawArrayTools/ref/RawArrayReverse"}},
+CellContext->"Global`",
+FrontEndVersion->"11.1 for Microsoft Windows (64-bit) (April 18, 2017)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "11.1 for Microsoft Windows (64-bit) (April 18, 2017)", 
+  StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[587, 21, 3500, 77, 70, "AnchorBarGrid", "ExpressionUUID" -> \
+"12036e2f-665a-40f8-9f89-76c89aebc61f",
+ CellID->1],
+Cell[4090, 100, 542, 15, 70, "ObjectNameGrid", "ExpressionUUID" -> \
+"a4b90942-10eb-4983-afe3-dc8114b685e0"],
+Cell[4635, 117, 2521, 77, 70, "Usage", "ExpressionUUID" -> \
+"0de40326-348d-4805-8081-aa40dac7827d"],
+Cell[CellGroupData[{
+Cell[7181, 198, 408, 13, 70, "MoreAboutSection", "ExpressionUUID" -> \
+"982140b3-3bd7-46a5-ad63-2ab32f8127b6",
+ CellID->38303248],
+Cell[7592, 213, 86, 0, 70, "SectionHeaderSpacer", "ExpressionUUID" -> \
+"aae3bac1-800b-4b85-90ab-9883254a437d"],
+Cell[7681, 215, 230, 5, 70, "MoreAbout", "ExpressionUUID" -> \
+"2b3f8aef-54c0-4b65-8adc-73e5d0d62362",
+ CellID->1]
+}, Open  ]],
+Cell[7926, 223, 78, 0, 70, "FooterCell", "ExpressionUUID" -> \
+"91a49269-3cd9-4d9b-abe4-03c061036cb1"]
+}
+]
+*)
+
+(* End of internal cache information *)

@@ -1,0 +1,183 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      6700,        174]
+NotebookOptionsPosition[      4531,        119]
+NotebookOutlinePosition[      6408,        168]
+CellTagsIndexPosition[      6365,        165]
+WindowTitle->RawArrayRest
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["RAW ARRAY TOOLS PACKAGE SYMBOL", "PacletNameCell",ExpressionUUID->
+     "79c3e300-6f78-4110-b2ee-f93ea5ddfdd3"], Cell[TextData[Cell[BoxData[
+     ActionMenuBox[
+      FrameBox[
+       InterpretationBox[Cell[TextData[{
+         "URL",
+         StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+          StripOnInput->False]
+        }],ExpressionUUID->"1db8fd0a-f9c1-47b2-86be-8b6a7b8fe70d"],
+        TextCell[
+         Row[{"URL", 
+           Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+       StripOnInput->False], {"\<\"RawArrayTools/ref/RawArrayRest\"\>":>
+      None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+      Module[{DocumentationSearch`Private`nb$}, 
+       DocumentationSearch`Private`nb$ = NotebookPut[
+          Notebook[{
+            Cell["RawArrayTools/ref/RawArrayRest"]}, Visible -> False]]; 
+       SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+       FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+       NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+      Delimiter, "\<\"Copy web URL\"\>":>
+      Module[{DocumentationSearch`Private`nb$}, 
+       DocumentationSearch`Private`nb$ = NotebookPut[
+          Notebook[{
+            Cell[
+             BoxData[
+              MakeBoxes[
+               Hyperlink[
+               "http://reference.wolfram.com/language/RawArrayTools/ref/\
+RawArrayRest.html"], StandardForm]], "Input", TextClipboardType -> 
+             "PlainText"]}, Visible -> False]]; 
+       SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+       FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+       NotebookClose[DocumentationSearch`Private`nb$]; 
+       Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+        NotebookLocate[{
+          URL[
+           StringJoin[
+            If[
+             TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$12460], 
+             "http://reference.wolfram.com/system-modeler/", 
+             "http://reference.wolfram.com/language/"], 
+            "RawArrayTools/ref/RawArrayRest", ".html"]], None}]}]},
+      Appearance->None,
+      MenuAppearance->Automatic,
+      MenuStyle->"URLMenu"]],
+     LineSpacing->{1.4, 0},ExpressionUUID->
+     "e8d96aee-ef2a-4aeb-ad22-11be162dfc36"]], "AnchorBar",ExpressionUUID->
+     "996a562e-cc0d-4fc3-bd6a-8e99ccc86ede"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1,ExpressionUUID->"395154e8-0c9f-432b-b0c8-40d44f2810a3"],
+
+Cell[TextData[{
+ Cell["RawArrayRest", "ObjectName",ExpressionUUID->
+  "05783a28-22b9-41ef-baa5-9c007931d87a"],
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{8, 0}],
+    CacheGraphics->False],
+   Spacer[8],
+   Selectable->False]],ExpressionUUID->"a0ea1142-6f3f-4ddc-a934-324257eeb581"],
+ Cell[BoxData[
+ ""], "ObjectNameTranslation",ExpressionUUID->
+  "96995929-20f4-422b-9e04-ec6224d05e95"]
+}], "ObjectNameGrid",ExpressionUUID->"fbd00772-2880-48d4-96bf-5ebece35e782"],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      TemplateBox[{Cell[
+         TextData["RawArrayRest"]],"paclet:RawArrayTools/ref/RawArrayRest"},
+       "RefLink",
+       BaseStyle->{"InlineFormula"}]], "InlineFormula",ExpressionUUID->
+      "d4fe0447-157b-42e7-b0b9-d34474942b9a"],
+     "[",
+     StyleBox["raw", "TI"],
+     "] gives ",
+     StyleBox["raw", "TI"],
+     " with the first element removed."
+    }],ExpressionUUID->"ac460570-b6a4-4ffe-bc33-9d3199118a34"]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {{None}}, 
+   "RowsIndexed" -> \
+{}}},ExpressionUUID->"0a4df09b-5da1-4530-88d3-ae482d519c91"],
+
+Cell[" ", "FooterCell",ExpressionUUID->"853f8463-013b-4ce7-b99b-e49a5fb0edef"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"RawArrayRest",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "SymbolColor", "LinkTrails" -> 
+  GridBox[{{
+      RowBox[{
+        ButtonBox[
+        "RawArrayTools", ButtonData -> 
+         "paclet:RawArrayTools/guide/RawArrayTools", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
+    Left], "HasOptions" -> False, "ExampleCounter" -> 1, "NeedPlatMsgIn" -> 
+  None, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2017, 7, 11, 14, 25, 53.1497891}", 
+    "history" -> {"XX", "", "", ""}, "context" -> "RawArrayTools`", 
+    "keywords" -> {}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "Raw Array Tools Package Symbol", "language" -> "en", "paclet" -> 
+    "RawArrayTools Package", "status" -> "None", "summary" -> 
+    "RawArrayRest[raw] gives raw with the first element removed.", 
+    "synonyms" -> {}, "tabletags" -> {}, "title" -> "RawArrayRest", 
+    "titlemodifier" -> "", "windowtitle" -> "RawArrayRest", "type" -> 
+    "Symbol", "uri" -> "RawArrayTools/ref/RawArrayRest"}},
+CellContext->"Global`",
+FrontEndVersion->"11.1 for Microsoft Windows (64-bit) (April 18, 2017)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "11.1 for Microsoft Windows (64-bit) (April 18, 2017)", 
+  StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[584, 21, 2616, 56, 70, "AnchorBarGrid", "ExpressionUUID" -> \
+"395154e8-0c9f-432b-b0c8-40d44f2810a3",
+ CellID->1],
+Cell[3203, 79, 539, 15, 70, "ObjectNameGrid", "ExpressionUUID" -> \
+"fbd00772-2880-48d4-96bf-5ebece35e782"],
+Cell[3745, 96, 701, 19, 70, "Usage", "ExpressionUUID" -> \
+"0a4df09b-5da1-4530-88d3-ae482d519c91"],
+Cell[4449, 117, 78, 0, 70, "FooterCell", "ExpressionUUID" -> \
+"853f8463-013b-4ce7-b99b-e49a5fb0edef"]
+}
+]
+*)
+
+(* End of internal cache information *)

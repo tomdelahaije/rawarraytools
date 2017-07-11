@@ -1,0 +1,469 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     17103,        460]
+NotebookOptionsPosition[     12616,        350]
+NotebookOutlinePosition[     14387,        391]
+CellTagsIndexPosition[     14344,        388]
+WindowTitle->RawArrayTools
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["RAW ARRAY TOOLS GUIDE", "PacletNameCell",ExpressionUUID->
+     "6eb4c220-3f3a-48f3-9de3-ffca250c96dc"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Functions",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }],ExpressionUUID->"9cab160a-386a-49fd-8a10-ca02259c0adb"],
+         TextCell[
+          Row[{"Functions", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"BinaryReadRawArray\"\>":>
+       Documentation`HelpLookup[
+       "paclet:RawArrayTools/ref/BinaryReadRawArray"], \
+"\<\"BinaryWriteRawArray\"\>":>Documentation`HelpLookup[
+       "paclet:RawArrayTools/ref/BinaryWriteRawArray"], "\<\"RawArrayAppend\"\
+\>":>Documentation`HelpLookup[
+       "paclet:RawArrayTools/ref/RawArrayAppend"], "\<\"RawArrayExtract\"\>":>
+       Documentation`HelpLookup[
+       "paclet:RawArrayTools/ref/RawArrayExtract"], "\<\"RawArrayPart\"\>":>
+       Documentation`HelpLookup[
+       "paclet:RawArrayTools/ref/RawArrayPart"], "\<\"RawArrayPrepend\"\>":>
+       Documentation`HelpLookup[
+       "paclet:RawArrayTools/ref/RawArrayPrepend"], "\<\"RawArrayReverse\"\>":>
+       Documentation`HelpLookup[
+       "paclet:RawArrayTools/ref/RawArrayReverse"], \
+"\<\"RawArrayTranspose\"\>":>Documentation`HelpLookup[
+       "paclet:RawArrayTools/ref/RawArrayTranspose"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"GuideFunction"]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "086d85bc-9ef2-4133-900e-b502d23e84d3"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "URL",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }],ExpressionUUID->"ebc235f4-78c1-440f-874e-d158e716b871"],
+         TextCell[
+          Row[{"URL", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"RawArrayTools/guide/RawArrayTools\"\>":>
+       None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["RawArrayTools/guide/RawArrayTools"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/language/RawArrayTools/guide/\
+RawArrayTools.html"], StandardForm]], "Input", TextClipboardType -> 
+              "PlainText"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+             If[
+              TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$6648], 
+              "http://reference.wolfram.com/system-modeler/", 
+              "http://reference.wolfram.com/language/"], 
+             "RawArrayTools/guide/RawArrayTools", ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"URLMenu"]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "0f438f1b-4ccb-4a6b-a316-a3f5d4754575"]
+    }], "AnchorBar",ExpressionUUID->"46bdae0d-3286-48a9-9c40-5da17f670410"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1,ExpressionUUID->"009dd864-38e8-43f3-b7b4-d7e36ee006e8"],
+
+Cell[CellGroupData[{
+
+Cell["RawArrayTools", "GuideTitle",
+ CellID->942062912,ExpressionUUID->"125f667e-a953-4656-b8ab-44a83fdd8d12"],
+
+Cell[TextData[{
+ "RawArrayTools` adds a small number of functions to simplify working with ",
+ ButtonBox["RawArray",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/RawArray"],
+ " objects, supplementing built-in functions such as ",
+ ButtonBox["Join",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/Join"],
+ " and ",
+ ButtonBox["Take",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/Take"],
+ " that already support raw arrays. This package is still in development and \
+may be unstable or produce unexpected results."
+}], "GuideAbstract",
+ CellID->2001916300,ExpressionUUID->"a0b29f9e-388b-4cd6-9799-127bc6c45e93"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6],
+   Selectable->False]],ExpressionUUID->"5a0ef597-f472-4cdc-b77d-6cdffe63cc24"],
+ "Reference"
+}], "GuideReferenceSection",
+ WholeCellGroupOpener->
+  True,ExpressionUUID->"55536aa0-e195-4882-9958-dffc74fe68cf"],
+
+Cell["", "SectionHeaderSpacer",ExpressionUUID->"03bf9dad-63d9-4e6f-8232-7c7defc1642b"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$RawArrayToolsLibrary"]],
+    "paclet:RawArrayTools/ref/$RawArrayToolsLibrary"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "2e7cbfd0-f343-450d-a293-5d9a523e986a"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " The full path to the RawArrayTools library."
+}], "GuideText",
+ CellID->203374175,ExpressionUUID->"990f2a3e-f4af-45ad-a224-cd1c9f6793fa"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$RawArrayToolsVersion"]],
+    "paclet:RawArrayTools/ref/$RawArrayToolsVersion"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "cf90e967-b855-4d50-af9c-038ad77a5f01"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " The version number of the RawArrayTools library."
+}], "GuideText",
+ CellID->1463276848,ExpressionUUID->"ce64eb54-71aa-469e-b984-f3856833edbd"],
+
+Cell[CellGroupData[{
+
+Cell["Extracting parts", "GuideFunctionsSubsection",
+ CellID->117688018,ExpressionUUID->"9f02fb0a-8829-4da4-804b-ff7f6549534a"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["RawArrayExtract"]],"paclet:RawArrayTools/ref/RawArrayExtract"},
+   
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "1800c710-0022-46c9-baaa-f84d93c4bdbd"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Extract elements at given positions"
+}], "GuideText",
+ CellID->31726769,ExpressionUUID->"f5453adb-ee6b-4979-9595-ff69644070c7"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["RawArrayPart"]],"paclet:RawArrayTools/ref/RawArrayPart"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "d3c84591-3436-4c02-af0f-45ef94e71906"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Extract parts of raw arrays"
+}], "GuideText",
+ CellID->188293167,ExpressionUUID->"5a8ba99e-637a-41c5-9ab7-8c7c251775a0"],
+
+Cell[BoxData[
+ RowBox[{Cell[BoxData[
+   TemplateBox[{Cell[
+      TextData["RawArrayFirst"]],"paclet:ref/RawArrayFirst"},
+    "RefLink",
+    BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+   "af194f81-dda6-4af6-8285-0f59e9e6771e"], " ", 
+  StyleBox["\[FilledVerySmallSquare]", "InlineSeparator"], " ", Cell[BoxData[
+   TemplateBox[{Cell[
+      TextData["RawArrayLast"]],"paclet:ref/RawArrayLast"},
+    "RefLink",
+    BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+   "56049015-7a67-42bf-844f-a0f42a0cae63"], " ", 
+  StyleBox["\[FilledVerySmallSquare]", "InlineSeparator"], " ", Cell[BoxData[
+   TemplateBox[{Cell[
+      TextData["RawArrayMost"]],"paclet:ref/RawArrayMost"},
+    "RefLink",
+    BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+   "d13848b0-c511-4d1f-8163-162c08207ca0"], " ", 
+  StyleBox["\[FilledVerySmallSquare]", "InlineSeparator"], " ", Cell[BoxData[
+   TemplateBox[{Cell[
+      TextData["RawArrayRest"]],"paclet:ref/RawArrayRest"},
+    "RefLink",
+    BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+   "4014c97d-bc23-4253-81fd-3d9b60aaf33a"]}]], "InlineGuideFunctionListing",
+ CellID->58033752,ExpressionUUID->"a77552bf-c5d4-4652-89ad-b0e2d43cc801"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Adding elements", "GuideFunctionsSubsection",
+ CellID->98295036,ExpressionUUID->"7cbe6f02-38f2-4a05-852f-4b3d4e8a3797"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["RawArrayAppend"]],"paclet:RawArrayTools/ref/RawArrayAppend"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "a3fe7b8d-3e4f-4d73-9e60-b1508baef509"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Append elements"
+}], "GuideText",
+ CellID->53011902,ExpressionUUID->"60c773ca-fbdd-477b-aca8-0192a68a2a2d"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["RawArrayPrepend"]],"paclet:RawArrayTools/ref/RawArrayPrepend"},
+   
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "e6f26d3e-4a37-4f08-990f-e9324cae5b2b"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Prepend elements"
+}], "GuideText",
+ CellID->401318393,ExpressionUUID->"5bbcd0fc-f29d-4c02-9e31-ba278014fb16"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Reordering elements", "GuideFunctionsSubsection",
+ CellID->633667713,ExpressionUUID->"c20310bc-41ec-49ed-82c3-dec2a32ae0f4"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["RawArrayReverse"]],"paclet:RawArrayTools/ref/RawArrayReverse"},
+   
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "3371bc7d-0706-40d6-9b11-94cbf8ef5452"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Reverse elements"
+}], "GuideText",
+ CellID->93393214,ExpressionUUID->"8457af3a-e8bd-4c44-9cfc-84aa81d661ae"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["RawArrayTranspose"]],
+    "paclet:RawArrayTools/ref/RawArrayTranspose"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "dcbbb74a-6562-4e95-9355-daab5a9b3ce1"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Transpose raw arrays"
+}], "GuideText",
+ CellID->514008355,ExpressionUUID->"10580e1f-44b3-4274-8e4b-47542c740c71"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Reading and writing", "GuideFunctionsSubsection",
+ CellID->28316506,ExpressionUUID->"f91b42b4-8842-48b9-baac-bc2a009fb2d9"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["BinaryReadRawArray"]],
+    "paclet:RawArrayTools/ref/BinaryReadRawArray"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "c0b7c9b2-e0a7-4d4c-9383-82cf95f3c75d"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Read a raw array from a binary file"
+}], "GuideText",
+ CellID->169037320,ExpressionUUID->"2253aeed-4d67-42f0-bd0d-3c49419a434c"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["BinaryWriteRawArray"]],
+    "paclet:RawArrayTools/ref/BinaryWriteRawArray"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "83389029-145c-449e-926a-9bb853b847ca"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Write a raw array to a binary file"
+}], "GuideText",
+ CellID->84642384,ExpressionUUID->"8cd1c426-419c-4ce6-b0b3-2659f3eee9a1"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[" ", "FooterCell",ExpressionUUID->"a9de4e4d-c08d-49b3-a902-a99eb480f996"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"RawArrayTools",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "GuideColor", "LinkTrails" -> 
+  GridBox[{{
+      RowBox[{
+        ButtonBox[
+        "Wolfram Language", ButtonData -> "paclet:guide/WolframRoot", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
+    Left], "ExampleCounter" -> 1, "NeedPlatMsgIn" -> None, "RootCaptions" -> 
+  "", "Metadata" -> {
+   "built" -> "{2017, 7, 11, 14, 25, 38.8885507}", 
+    "history" -> {"0.1", "", "", ""}, "context" -> "RawArrayTools`", 
+    "keywords" -> {}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "Raw Array Tools Guide", "language" -> "en", "paclet" -> "RawArrayTools", 
+    "status" -> "None", "summary" -> 
+    "RawArrayTools` adds a small number of functions to simplify working with \
+RawArray objects, supplementing built-in functions such as Join and Take that \
+already support raw arrays. This package is still in development and may be \
+unstable or produce unexpected results.", "synonyms" -> {}, "tabletags" -> 
+    DocumentationBuild`Make`Private`tabletaggingrules$6575, "title" -> 
+    "RawArrayTools", "titlemodifier" -> "", "windowtitle" -> "RawArrayTools", 
+    "type" -> "Guide", "uri" -> "RawArrayTools/guide/RawArrayTools"}},
+FrontEndVersion->"11.1 for Microsoft Windows (64-bit) (April 18, 2017)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
+  CharacterEncoding -> "UTF-8"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[585, 21, 4277, 92, 70, "AnchorBarGrid", "ExpressionUUID" -> \
+"009dd864-38e8-43f3-b7b4-d7e36ee006e8",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[4887, 117, 110, 1, 70, "GuideTitle", "ExpressionUUID" -> \
+"125f667e-a953-4656-b8ab-44a83fdd8d12",
+ CellID->942062912],
+Cell[5000, 120, 613, 16, 70, "GuideAbstract", "ExpressionUUID" -> \
+"a0b29f9e-388b-4cd6-9799-127bc6c45e93",
+ CellID->2001916300]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5650, 141, 392, 13, 70, "GuideReferenceSection", "ExpressionUUID" -> \
+"55536aa0-e195-4882-9958-dffc74fe68cf"],
+Cell[6045, 156, 86, 0, 70, "SectionHeaderSpacer", "ExpressionUUID" -> \
+"03bf9dad-63d9-4e6f-8232-7c7defc1642b"],
+Cell[6134, 158, 467, 12, 70, "GuideText", "ExpressionUUID" -> \
+"990f2a3e-f4af-45ad-a224-cd1c9f6793fa",
+ CellID->203374175],
+Cell[6604, 172, 473, 12, 70, "GuideText", "ExpressionUUID" -> \
+"ce64eb54-71aa-469e-b984-f3856833edbd",
+ CellID->1463276848],
+Cell[CellGroupData[{
+Cell[7102, 188, 127, 1, 70, "GuideFunctionsSubsection", "ExpressionUUID" -> \
+"9f02fb0a-8829-4da4-804b-ff7f6549534a",
+ CellID->117688018],
+Cell[7232, 191, 445, 12, 70, "GuideText", "ExpressionUUID" -> \
+"f5453adb-ee6b-4979-9595-ff69644070c7",
+ CellID->31726769],
+Cell[7680, 205, 428, 11, 70, "GuideText", "ExpressionUUID" -> \
+"5a8ba99e-637a-41c5-9ab7-8c7c251775a0",
+ CellID->188293167],
+Cell[8111, 218, 1269, 25, 70, "InlineGuideFunctionListing", "ExpressionUUID" \
+-> "a77552bf-c5d4-4652-89ad-b0e2d43cc801",
+ CellID->58033752]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9417, 248, 125, 1, 70, "GuideFunctionsSubsection", "ExpressionUUID" -> \
+"7cbe6f02-38f2-4a05-852f-4b3d4e8a3797",
+ CellID->98295036],
+Cell[9545, 251, 419, 11, 70, "GuideText", "ExpressionUUID" -> \
+"60c773ca-fbdd-477b-aca8-0192a68a2a2d",
+ CellID->53011902],
+Cell[9967, 264, 427, 12, 70, "GuideText", "ExpressionUUID" -> \
+"5bbcd0fc-f29d-4c02-9e31-ba278014fb16",
+ CellID->401318393]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10431, 281, 130, 1, 70, "GuideFunctionsSubsection", "ExpressionUUID" -> \
+"c20310bc-41ec-49ed-82c3-dec2a32ae0f4",
+ CellID->633667713],
+Cell[10564, 284, 426, 12, 70, "GuideText", "ExpressionUUID" -> \
+"8457af3a-e8bd-4c44-9cfc-84aa81d661ae",
+ CellID->93393214],
+Cell[10993, 298, 436, 12, 70, "GuideText", "ExpressionUUID" -> \
+"10580e1f-44b3-4274-8e4b-47542c740c71",
+ CellID->514008355]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11466, 315, 129, 1, 70, "GuideFunctionsSubsection", "ExpressionUUID" -> \
+"f91b42b4-8842-48b9-baac-bc2a009fb2d9",
+ CellID->28316506],
+Cell[11598, 318, 453, 12, 70, "GuideText", "ExpressionUUID" -> \
+"2253aeed-4d67-42f0-bd0d-3c49419a434c",
+ CellID->169037320],
+Cell[12054, 332, 453, 12, 70, "GuideText", "ExpressionUUID" -> \
+"8cd1c426-419c-4ce6-b0b3-2659f3eee9a1",
+ CellID->84642384]
+}, Open  ]]
+}, Open  ]],
+Cell[12534, 348, 78, 0, 70, "FooterCell", "ExpressionUUID" -> \
+"a9de4e4d-c08d-49b3-a902-a99eb480f996"]
+}
+]
+*)
+
+(* End of internal cache information *)
