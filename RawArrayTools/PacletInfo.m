@@ -1,7 +1,3 @@
-(* Paclet Info File *)
-
-(* created 2020/08/12*)
-
 Paclet[
     Name -> "RawArrayTools",
     Version -> "0.1.0",
